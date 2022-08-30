@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Sawant Infotech - Tool</title>
+    <link rel="icon" type="image/x-icon" href="https://sawant-infotech.github.io/source/logo.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- style -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/5b9d825ee0.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="source/js/index.js"></script>
+    <!-- social media -->
+    <meta property="og:title" content="Sawant Infotech" />
+    <meta property="og:description" content="Web and Software Development" />
+    <meta property="og:image" content="https://sawant-infotech.github.io/source/logo.jpg" />
+    <!-- SEO -->
+    <meta name="description" content="Make New Software As Your Requirements">
+    <meta name="keywords" content="software, sawant, web, development, coding, programming, website development">
+    <meta name="author" content="Sawant Infotech (Shubham Sawant)">
+    <!-- redirects -->
+    <meta http-equiv="refresh"
+        content="10; URL=https://drive.google.com/drive/folders/1m5EK5DRGpK5SraXaH2j_XRkc_66iCTj4/" />
+</head>
+
+<body class="p-0 m-0 border-0">
+    <!-- client data -->
+    <div class="visually-hidden">
+        <form name="visited-ip-form" method="POST">
+            <input type="text" name="IP" id="visit-ip-p1"><br>
+            <input type="text" name="IP Version" id="visit-ip-p2"><br>
+            <input type="text" name="City" id="visit-ip-p3"><br>
+            <input type="text" name="Region Code" id="visit-ip-p4"><br>
+            <input type="text" name="Region Name" id="visit-ip-p5"><br>
+            <input type="text" name="Country Code" id="visit-ip-p6"><br>
+            <input type="text" name="Country Name" id="visit-ip-p7"><br>
+            <input type="text" name="Country Capital" id="visit-ip-p8"><br>
+            <input type="text" name="Postal Code" id="visit-ip-p9"><br>
+            <input type="text" name="Latitude" id="visit-ip-p10"><br>
+            <input type="text" name="Longitude" id="visit-ip-p11"><br>
+            <input type="text" name="Time Zone" id="visit-ip-p12"><br>
+            <input type="text" name="Country Calling Code" id="visit-ip-p13"><br>
+            <input type="text" name="Autonomous System Name" id="visit-ip-p14"><br>
+            <input type="text" name="Organization" id="visit-ip-p15"><br>
+            <input type="text" name="Visit Date Time" id="visit-ip-p16">
+            <input type="text" name="Page" id="visit-ip-p17">
+        </form>
+        <script>
+            const scriptURL3 = 'https://script.google.com/macros/s/AKfycbz8Naryd7JIwMPLEk_19h3cxn_bN5kjMBHhhqAD_wpoNGkp1MYy4s6oUqKAolDoPEfa/exec'
+            const form3 = document.forms['visited-ip-form']
+            $.ajax(/*'http://ip-api.com/json'*/ 'https://ipapi.co/json/')
+                .then(
+                    function success(response) {
+                        document.getElementById('visit-ip-p1').value = response.ip;
+                        document.getElementById('visit-ip-p2').value = response.version;
+                        document.getElementById('visit-ip-p3').value = response.city;
+                        document.getElementById('visit-ip-p4').value = response.region_code;
+                        document.getElementById('visit-ip-p5').value = response.region;
+                        document.getElementById('visit-ip-p6').value = response.country_code;
+
+                        document.getElementById('visit-ip-p7').value = response.country_name;
+                        document.getElementById('contact-us-country').value = response.country_name;
+                        document.getElementById('feedback-country').value = response.country_name;
+
+
+                        document.getElementById('visit-ip-p8').value = response.country_capital;
+                        document.getElementById('visit-ip-p9').value = response.postal;
+                        document.getElementById('visit-ip-p10').value = response.latitude;
+                        document.getElementById('visit-ip-p11').value = response.longitude;
+                        document.getElementById('visit-ip-p12').value = response.timezone;
+                        document.getElementById('visit-ip-p13').value = response.country_calling_code;
+                        document.getElementById('visit-ip-p14').value = response.asn;
+                        document.getElementById('visit-ip-p15').value = response.org;
+                        document.getElementById('visit-ip-p16').value = new Date();
+                        document.getElementById('visit-ip-p17').value = 'Tool';
+                        fetch(scriptURL3, { method: 'POST', body: new FormData(form3) })
+                            .then(response => console.log('Sucess')
+                            )
+                            .catch(error => console.error('Error!', error.message))
+                    },
+                    function fail(data, status) {
+                        document.getElementById('visit-ip-p1').value = response.status;
+                        console.log('Request failed.  Returned status of',
+                            status);
+                        fetch(scriptURL3, { method: 'POST', body: new FormData(form3) })
+                            .then(response => console.log('Sucess')
+                            )
+                            .catch(error => console.error('Error!', error.message))
+                    }
+                );
+        </script>
+    </div>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center bg-back">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle shadow-lg"></div>
+                <div class="preloader-img pere-text">
+                    <img src="https://sawant-infotech.github.io/source/logo.png" alt="sawant-infotech">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- support heading -->
+    <nav class="navbar border-dark bg-dark bg-opacity-10 navbar-fixed-top visually-hidden">
+        <div class="container-fluid text-center">
+            <div class="row w-100">
+                <div class="col col-md-6 col-sm-12">
+                    <a class="navbar-brand text-center w-100 fs-6" href="tel:8806288365"><i
+                            class="fa-solid fa-phone"></i> Contact :
+                        +91 88062 88365</a>
+                </div>
+                <div class="col col-md-6 col-sm-12">
+                    <a class="navbar-brand text-center w-100 fs-6" href="mailto:sawant.infotech.14@gmail.com"><i
+                            class="fa-regular fa-envelope"></i>
+                        Support :
+                        sawant.infotech.14@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://sawant-infotech.github.io/">
+                <img src="https://sawant-infotech.github.io/source/logo.png" alt="Sawant Infotech" width="50"
+                    height="50">
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="https://sawant-infotech.github.io/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://sawant-infotech.github.io/project.html">Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#contactUsModal">Contact
+                            Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://sawant-infotech.github.io/about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- contact us Modal -->
+        <div class="modal fade" id="contactUsModal" tabindex="-1" aria-labelledby="contactUsModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title w-100 text-center" id="contactUsModalLabel"> <i
+                                class="fa-solid fa-phone"></i> Contact Us</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form class="needs-validation was-validated" name="contact-us-form" id="contact-us-form-id"
+                        method="POST">
+                        <div class="modal-body">
+                            <!-- contact us from -->
+                            <div class="mb-3 visually-hidden">
+                                <label for="exampleFormControlInput1" class="form-label">IP Address
+                                </label>
+                                <input type="text" class="form-control border" id="ip-contact-us" name="Client IP"
+                                    placeholder="IP" tabindex="-1">
+                            </div>
+                            <div class="mb-3 visually-hidden">
+                                <label for="exampleFormControlInput1" class="form-label">Submit Date Time
+                                </label>
+                                <input type="text" class="form-control borderr" id="dateTime-contact-us"
+                                    name="Client Submit Date Time" placeholder="Date Time" tabindex="-1">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Name
+                                </label>
+                                <input type="text" class="form-control border" id="" placeholder="Your Name"
+                                    name="Client Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="form-label">City
+                                </label>
+                                <input type="text" class="form-control border" id="" placeholder="Your City"
+                                    name="Client City" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput3" class="form-label">Country
+                                </label>
+                                <input type="text" class="form-control border" id="contact-us-country"
+                                    placeholder="Country" name="Client Country" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput4" class="form-label">Phone
+                                </label>
+                                <input type="text" class="form-control border" id="" placeholder="1234567890"
+                                    name="Client Phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput5" class="form-label">Mail
+                                    Address</label>
+                                <input type="email" class="form-control border" id="" placeholder="name@example.com"
+                                    name="Client Mail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Type
+                                    Something</label>
+                                <textarea class="form-control border" id="" rows="3"
+                                    placeholder="Type Something Here..." name="Client Summery"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary glass" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary glass"
+                                onclick="getDateTime('dateTime-contact-us'), getIp('ip-contact-us')">
+                                <div class="spinner-border spinner-border-sm me-2 visually-hidden"
+                                    id="contact-us-submit-btn-spinner" role="status"></div>
+                                Submit
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- go to top on screen button -->
+    <div class="position-fixed bottom-0 end-0 p-3 visually-hidden" id="goToTop" style="z-index: 1;">
+        <button class="btn btn-secondary" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+        <script>
+            function scrollToTop() {
+                window.scrollTo(0, 0);
+            }
+        </script>
+    </div>
+    <div class="container d-flex justify-content-center align-items-center" style="margin-top: 80px; height: 50vh;">
+        <div class="text-center">
+            <h2>Redirecting With Drive</h2>
+            <p id="count"></p>
+            <p>Please Wait...</p>
+            <a href="index.html" class="mt-0 text-decoration-none">Refresh</a>
+            <br>or<br>
+            <a href="https://sawant-infotech.github.io/index.html" class="mt-0 text-decoration-none">Go To Home</a>
+            <script>
+                var i = 10;
+                function makeAlert() {
+                    document.getElementById('count').innerHTML = i;
+                    i--;
+                };
+
+                setInterval(makeAlert, 1000);
+            </script>
+        </div>
+    </div>
+    <!-- footer -->
+    <!-- submit Modal -->
+    <div class="modal fade" id="need-a-consulation-project-submit" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="1" aria-labelledby="need-a-consulation-project-submitLabel" aria-hidden="true"
+        style="z-index: 99999;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="need-a-consulation-project-submitLabel">Sawant Infotech</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="hideSpinner('need-a-consulation-submit-btn-spinner'), 
+                    hideSpinner('contact-us-submit-btn-spinner'), 
+                    hideSpinner('feedback-submit-btn-spinner'), hideSpinner('idea-submit-btn-spinner')"></button>
+                </div>
+                <div class="modal-body">
+                    Thanks for contacting With Us..! <br>
+                    We Will Contact You Soon...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" tabindex="1" onclick="hideSpinner('need-a-consulation-submit-btn-spinner'), 
+                        hideSpinner('contact-us-submit-btn-spinner'), 
+                        hideSpinner('feedback-submit-btn-spinner'), hideSpinner('idea-submit-btn-spinner')">
+                        Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="border-top my-4">
+        <div class="container text-center pt-3 pt-lg-4">
+            <h2 class="pb-1">
+                <span class="fs-2">Feedback is a gift.</span><br>
+                <sapn class="fs-4">Ideas are the currency of our next success.<br>Let people see you value both feedback
+                    and ideas</sapn>
+            </h2>
+            <h3 class="fw-light">Send Your Valuable Feedback & Idea</h3>
+            <a class="btn btn-primary btn-lg m-1" href="" target="" rel="noopener" data-bs-toggle="modal"
+                data-bs-target="#feedbackModal" style="width: 200px;">
+                <i class="ci-cart me-2"></i> <i class="fa-solid fa-comments"></i> Feedback
+            </a>
+            <a class="btn btn-primary btn-lg m-1" href="" target="" rel="noopener" data-bs-toggle="modal"
+                data-bs-target="#ideaModal" style="width: 200px;">
+                <i class="fa-regular fa-lightbulb"></i> Idea
+            </a>
+            <hr class="my-3">
+            <a href="https://www.instagram.com/sawant.infotech/" target="_blank" class="text-decoration-none">
+                <i class="fa-brands fa-instagram text-dark mx-2" style="font-size: 30px;"></i>
+            </a>
+            <a href="https://api.whatsapp.com/message/5PONUR5Y5P5QF1?autoload=1&app_absent=0" target="_blank"
+                class="text-decoration-none">
+                <i class="fa-brands fa-whatsapp text-dark mx-2" style="font-size: 30px;"></i>
+            </a>
+            <a href="mailto:sawant.infotech.14@gmail.com" target="_blank" class="text-decoration-none">
+                <i class="fa-regular fa-envelope text-dark mx-2" style="font-size: 30px;"></i>
+            </a>
+            <a href="index.html" class="text-decoration-none">
+                <i class="fa-solid fa-globe text-dark mx-2" style="font-size: 28px;"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCrvB1k-yqn2xqeb9s5Amekg" class="text-decoration-none">
+                <i class="fa-brands fa-youtube text-dark mx-2" style="font-size: 28px;"></i>
+            </a>
+            <div class="fs-ms text-muted text-center">© All rights reserved. Made by <a class="text-muted"
+                    href="index.html" target="" rel="noopener">Sawant Infotech</a></div>
+        </div>
+        <!-- feedback Modal -->
+        <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true"
+            style="z-index: 99999;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title w-100 text-center" id="feedbackModalLabel"> <i
+                                class="fa-solid fa-comments"></i> Feedback</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form class="needs-validation was-validated" name="feedback-form" id="feedback-form-id"
+                        method="POST">
+                        <div class="modal-body">
+                            <!-- feedback from -->
+                            <div class="mb-3 form-floating visually-hidden">
+                                <input type="text" class="form-control border" id="ip-feedback" name="Client IP"
+                                    placeholder="Your Name" tabindex="-1">
+                                <label for="">IP Address</label>
+                            </div>
+                            <div class="mb-3 form-floating visually-hidden">
+                                <input type="text" class="form-control border" id="dateTime-feedback"
+                                    name="Client Submit Date Time" placeholder="Your Name" tabindex="-1">
+                                <label for="">Client Submit Date Time</label>
+                            </div>
+                            <div class="mb-3 form-floating">
+                                <input type="text" class="form-control border" id="" name="Client Name"
+                                    placeholder="Your Name" required>
+                                <label for="">Name</label>
+                            </div>
+                            <div class="mb-3 form-floating">
+                                <input type="text" class="form-control border" id="" name="Client City"
+                                    placeholder="Your City" required>
+                                <label for="">City
+                                </label>
+                            </div>
+                            <div class="mb-3 form-floating">
+                                <input type="text" class="form-control border" id="feedback-country"
+                                    name="Client Country" placeholder="Country" required>
+                                <label for="">Country
+                                </label>
+                            </div>
+                            <div class="mb-3 form-floating">
+                                <input type="text" class="form-control border" id="" name="Client Phone"
+                                    placeholder="1234567890" required>
+                                <label for="">Phone
+                                </label>
+                            </div>
+                            <div class="mb-3 form-floating">
+                                <input type="email" class="form-control border" id="" name="Client Mail"
+                                    placeholder="name@example.com" required>
+                                <label for="">Mail</label>
+                            </div>
+                            <div class="form-floating">
+                                <textarea class="form-control border" placeholder="Leave a feedback here" id=""
+                                    name="Client Feedback" style="height: 100px" required></textarea>
+                                <label for="">Feedback</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary glass" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary glass"
+                                onclick="getDateTime('dateTime-feedback'), getIp('ip-feedback')">
+                                <div class="spinner-border spinner-border-sm me-2 visually-hidden" role="status"
+                                    id="feedback-submit-btn-spinner"></div>Submit
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- idea Modal -->
+        <div class="modal fade" id="ideaModal" tabindex="-1" aria-labelledby="ideaModalLabel" aria-hidden="true"
+            style="z-index: 99999;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title w-100 text-center" id="ideaModalLabel"> <i
+                                class="fa-regular fa-lightbulb"></i> idea</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form class="needs-validation was-validated" name="idea-form" id="idea-form-id" method="POST">
+                        <div class="modal-body">
+                            <!-- idea from -->
+                            <div class="mb-3 form-floating visually-hidden">
+                                <input type="text" class="form-control border " id="ip-idea" name="Client IP"
+                                    placeholder="Your Name">
+                                <label for="">IP Address</label>
+                            </div>
+                            <div class="mb-3 form-floating visually-hidden">
+                                <input type="text" class="form-control border " id="dateTime-idea"
+                                    name="Client Submit Date Time" placeholder="Your Name">
+                                <label for="">Client Submit Date Time</label>
+                            </div>
+                            <div class="mb-3 form-floating">
+                                <input type="text" class="form-control border" id="" name="Client Name"
+                                    placeholder="Your Name" required>
+                                <label for="ideaFormControlInput1">Name</label>
+                            </div>
+                            <div class="mb-3 form-floating">
+                                <input type="text" class="form-control border" id="" name="Client Phone"
+                                    placeholder="1234567890" required>
+                                <label for="ideaFormControlInput4">Phone
+                                </label>
+                            </div>
+                            <div class="mb-3 form-floating">
+                                <input type="email" class="form-control border" id="" name="Client Mail"
+                                    placeholder="name@example.com" required>
+                                <label for="ideaFormControlInput5">Mail</label>
+                            </div>
+                            <div class="form-floating">
+                                <textarea class="form-control border" placeholder="Leave a idea here" id=""
+                                    name="Client Idea" style="height: 100px" required></textarea>
+                                <label for="floatingTextarea2">Idea</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary glass" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary glass"
+                                onclick="getDateTime('dateTime-idea'), getIp('ip-idea')">
+                                <div class="spinner-border spinner-border-sm me-2 visually-hidden" role="status"
+                                    id="idea-submit-btn-spinner"></div>Submit
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function clrForm(idName) {
+            $('#' + idName)[0].reset();
+            getIp('ip-Discuss-Project');
+            getIp('ip-need-consulation');
+            getIp('ip-contact-us');
+            getIp('ip-feedback');
+            getIp('ip-idea');
+        }
+        function hideSpinner(idName) {
+            $('#' + idName).addClass("visually-hidden");
+            if (idName == 'discuss-your-project-submit-btn-spinner') {
+                clrForm('discuss-your-project-form-id');
+            }
+            else if (idName == 'need-a-consulation-submit-btn-spinner') {
+                clrForm('need-a-consultation-form-id');
+            }
+            else if (idName == 'contact-us-submit-btn-spinner') {
+                clrForm('contact-us-form-id');
+            } else if (idName == 'feedback-submit-btn-spinner') {
+                clrForm('feedback-form-id');
+            }
+            else if (idName == 'idea-submit-btn-spinner') {
+                clrForm('idea-form-id');
+            }
+
+        }
+        function showSpinner(idName) {
+            $('#' + idName).removeClass("visually-hidden");
+        }
+        function getIp(idName) {
+            // $.getJSON("https://api.ipify.org?format=json", function (data) { $('#' + idName).val(data.ip); })
+            $('#' + idName).val($('#visit-ip-p1').val());
+        }
+        function getDateTime(idDateTime) {
+            var dateTime = new Date();
+            document.getElementById(idDateTime).value = dateTime;
+        }
+        const scriptURL4 = 'https://script.google.com/macros/s/AKfycbxtPIigcStmMi2udwTwPrv-VNUMHKh_28VLt0VsKeRcPN10eM96jGvKE22efvHknyUe/exec'
+        const form4 = document.forms['contact-us-form']
+        form4.addEventListener('submit', e => {
+            showSpinner('contact-us-submit-btn-spinner')
+            e.preventDefault()
+            fetch(scriptURL4, { method: 'POST', body: new FormData(form4) })
+                .then(response => ($('#contactUsModal').modal('toggle'), $('#need-a-consulation-project-submit').modal("show"))
+                )
+                .catch(error => console.error('Error!', error.message))
+
+        })
+        const scriptURL5 = 'https://script.google.com/macros/s/AKfycbwrpDtBwtBAF3VJTIr2XRyf4PnrsZoNvrYbMr-HOxv8vklMepSfJUgCNLoeoJDPuCap/exec'
+        const form5 = document.forms['feedback-form']
+        form5.addEventListener('submit', e => {
+            showSpinner('feedback-submit-btn-spinner')
+            e.preventDefault()
+            fetch(scriptURL5, { method: 'POST', body: new FormData(form5) })
+                .then(response => ($('#feedbackModal').modal('toggle'), $('#need-a-consulation-project-submit').modal("show"))
+                )
+                .catch(error => console.error('Error!', error.message))
+
+        })
+        const scriptURL6 = 'https://script.google.com/macros/s/AKfycbyPqbMmqaZkNpPU5vYVLYKd4tPiVcyz5niqC6oF_wa_SSDN1MIUcxwxPtPjSnVwfouR4A/exec'
+        const form6 = document.forms['idea-form']
+        form6.addEventListener('submit', e => {
+            showSpinner('idea-submit-btn-spinner')
+            e.preventDefault()
+            fetch(scriptURL6, { method: 'POST', body: new FormData(form6) })
+                .then(response => ($('#ideaModal').modal('toggle'), $('#need-a-consulation-project-submit').modal("show"))
+                )
+                .catch(error => console.error('Error!', error.message))
+
+        })
+
+        /* 1. Proloder */
+        $(window).on('load', function () {
+            $('#preloader-active').delay(450).fadeOut('slow');
+            $('body').delay(450).css({
+                'overflow': 'visible'
+            });
+        });
+
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-80px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+
+    </script>
+</body>
+
+</html>
